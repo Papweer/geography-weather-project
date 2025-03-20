@@ -1,0 +1,20 @@
+{
+  "name": "mrmccondichie",
+  "version": "1.0.0",
+  "description": "A website with resources and learning materials for Chemistry",
+  "repository": {
+    "type": "git",
+    "url": "mrmccondichie"
+  },
+  "license": "ISC",
+  "author": "Ruslan Tylychko",
+  "type": "commonjs",
+  "main": "index.js",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "tailwindcss": "^4.0.14"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.14"
+  }
+}
