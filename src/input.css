@@ -1,2 +1,8 @@
 @import "tailwindcss";
 
+/* @theme {
+  --font-source-sans: "Rubix", "monospace"; 
+} */
+* {
+    font-family: "Source Sans 3" serif !important;
+}

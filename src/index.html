@@ -1,14 +1,705 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
-    <title>Mr McCondichie - Home</title>
+    <title>Weather Alert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <script src="script.js"></script>
 </head>
-<body>
-    <header class="bg-slate-300">
-        
+
+<body class="bg-gray-50">
+    <header class="bg-gradient-to-r from-red-800 to-red-600 text-white shadow-lg">
+        <div class="container mx-auto py-6 px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <svg class="w-10 h-10 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Blizzard Warning Alerts</h1>
+                        <div class="h-1 w-24 bg-white mt-2 rounded-full opacity-70"></div>
+                    </div>
+                </div>
+                <p class="text-lg md:text-xl font-light max-w-md italic">
+                    Stay informed, stay safe. Know the risks of blizzards and their impact.
+                </p>
+            </div>
+        </div>
+        <div class="flex overflow-hidden h-2">
+            <div class="w-1/6 bg-red-900"></div>
+            <div class="w-1/6 bg-red-800"></div>
+            <div class="w-1/6 bg-red-700"></div>
+            <div class="w-1/6 bg-red-600"></div>
+            <div class="w-1/6 bg-red-500"></div>
+            <div class="w-1/6 bg-red-400"></div>
+        </div>
     </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Current Weather Warning Card -->
+            <div class="lg:col-span-1">
+                <div class="bg-red-600 text-white rounded-lg shadow-lg overflow-hidden sticky top-4">
+                    <div class="flex items-center p-4 border-b border-red-500">
+                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                            </path>
+                        </svg>
+                        <span class="text-xl font-bold uppercase tracking-wider">Current Severe Weather Warning</span>
+                    </div>
+
+                    <div class="p-4">
+                        <h2 class="text-2xl font-bold mb-3">Blizzard Warning: Dangerously High Winds</h2>
+
+                        <div class="flex justify-center my-6">
+                            <div class="w-32 h-32 rounded-full bg-red-700 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold">120-130</div>
+                                    <div class="text-sm">KPH Winds</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h3 class="text-lg font-semibold mb-2 bg-red-700 px-2 py-1 rounded">What to expect:</h3>
+                            <ul class="space-y-2 pl-2">
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span><strong>Certain:</strong> Travel dangerous or impossible</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span><strong>Expected:</strong> Flying debris and structural damage to
+                                        buildings</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span><strong>Likely:</strong> Power outages and property damage due to 80mph
+                                        winds</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span><strong>Probable:</strong> Dangerous whiteout conditions with zero visibility
+                                        on
+                                        roads</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-4 bg-red-700 p-3 rounded-md text-center">
+                            <p class="font-bold">Stay inside and avoid all non-essential travel</p>
+                            <p class="text-sm">Continue reading for more info about Blizzards</p>
+                        </div>
+
+                        <div class="mt-6 text-center">
+                            <p class="font-semibold">Expected Duration</p>
+                            <p>April 1, 2025 - April 3, 2025</p>
+                            <div class="w-full bg-red-700 h-2 mt-2 rounded-full overflow-hidden">
+                                <div class="bg-white w-1/4 h-full"></div>
+                            </div>
+                            <p class="text-sm mt-1">25% complete</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Understanding Blizzards Card -->
+            <div class="lg:col-span-2">
+                <div class="bg-white border-2 border-red-600 text-gray-800 rounded-lg shadow-lg overflow-hidden h-fit">
+                    <div class="bg-red-600 text-white p-4 border-b border-red-500">
+                        <h2 class="text-xl font-bold">Understanding Blizzards</h2>
+                    </div>
+            
+                    <!-- Tabbed navigation -->
+                    <div class="bg-red-100 flex border-b border-red-200">
+                        <button class="tab-button flex-1 py-3 px-4 font-semibold text-red-700 hover:bg-red-50" data-tab="tab1">
+                            What are blizzards?
+                        </button>
+                        <button class="tab-button flex-1 py-3 px-4 font-semibold text-red-700 hover:bg-red-50" data-tab="tab2">
+                            Effects
+                        </button>
+                        <button class="tab-button flex-1 py-3 px-4 font-semibold text-red-700 hover:bg-red-50" data-tab="tab3">
+                            Safety Tips
+                        </button>
+                    </div>
+            
+                    <div class="p-4">
+                        <!-- What are blizzards section -->
+                        <div id="tab1" class="tab-content">
+                            <h3 class="text-xl font-semibold mb-4 text-red-800">Understanding Blizzards</h3>
+                            <div class="flex flex-col md:flex-row gap-6 mb-6">
+                                <div class="md:w-2/3">
+                                    <p class="mb-4">A blizzard is a severe winter storm characterised by strong,
+                                        sustained winds (typically exceeding 56 km/h), significant snowfall or blowing snow,
+                                        and reduced visibility (less than 400 metres) for a duration of at least three
+                                        hours.</p>
+            
+                                    <p class="mb-4">These conditions can lead to hazardous travel, extreme cold, and reduced
+                                        visibility, making blizzards one of the most dangerous winter weather phenomena in the UK, though they occur less frequently than in other regions.</p>
+                                        
+                                    <p class="mb-4">Unlike regular snowstorms, blizzards are defined primarily by their wind speed and visibility reduction rather than by the amount of snowfall. In fact, a blizzard can occur without any falling snow if strong winds pick up and blow around snow that has already fallen—a common occurrence in parts of northern England and Scotland.</p>
+                                </div>
+                                <div class="md:w-1/3 bg-red-50 p-4 rounded-lg border border-red-200">
+                                    <h4 class="font-semibold text-red-800 mb-2">Blizzard Criteria:</h4>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Winds ≥ 56 km/h</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Visibility < 400 metres</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Duration ≥ 3 hours</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold mb-3 text-red-800">Types of Severe Winter Weather</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                                        <h5 class="font-semibold text-red-800 mb-2">Ground Blizzard</h5>
+                                        <p>Occurs when strong winds lift and blow loose snow that has already fallen. No new snowfall is needed, just existing snow and powerful winds. Common in exposed upland areas of Scotland and Northern England.</p>
+                                    </div>
+                                    <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                                        <h5 class="font-semibold text-red-800 mb-2">Freezing Rain</h5>
+                                        <p>Rain that falls through a shallow layer of cold temperatures near the surface, allowing the raindrops to freeze on contact with surfaces creating a coating of ice. A significant hazard on UK roads and railways.</p>
+                                    </div>
+                                    <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                                        <h5 class="font-semibold text-red-800 mb-2">Atlantic Storms</h5>
+                                        <p>Low-pressure systems from the Atlantic can bring heavy snowfall and strong winds to the UK, especially affecting western regions and higher ground in Wales, Scotland, and northern England.</p>
+                                    </div>
+                                    <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                                        <h5 class="font-semibold text-red-800 mb-2">Beast from the East</h5>
+                                        <p>A weather pattern bringing cold air from Siberia and Russia to the UK. When this cold air meets Atlantic weather systems, it can cause significant snowfall across the country, as seen in 2018.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="text-lg font-semibold mb-3 text-red-800">Historical Context in the UK</h4>
+                                <p class="mb-4">While true blizzards are relatively rare in the UK compared to North America or parts of continental Europe, the country has experienced several significant winter weather events that have caused major disruption.</p>
+                                <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                                    <h5 class="font-semibold text-red-800 mb-2">Notable UK Winter Weather Events</h5>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Winter of 1962-63</strong> - Known as the "Big Freeze," one of the coldest winters on record with snow lying for months in some areas.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>January 1978</strong> - Severe blizzards across the south and southwest of England trapped thousands of motorists overnight.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>January 1987</strong> - Southeast England experienced its heaviest snowfall since 1962-63, with up to 30cm in places.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>February 2018 ("Beast from the East")</strong> - Brought widespread snow and sub-zero temperatures across the UK, combining with Storm Emma to create blizzard conditions in many areas.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                                <h5 class="font-semibold text-red-800 mb-2">Met Office Weather Warnings</h5>
+                                <p class="mb-3">The Met Office issues colour-coded warnings to inform the public about severe weather:</p>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                                    <div class="bg-yellow-50 p-3 rounded border border-yellow-200">
+                                        <h6 class="font-semibold text-yellow-800">Yellow</h6>
+                                        <p class="text-sm">Be aware. Potential for disruption or low impact severe weather.</p>
+                                    </div>
+                                    <div class="bg-amber-50 p-3 rounded border border-amber-200">
+                                        <h6 class="font-semibold text-amber-800">Amber</h6>
+                                        <p class="text-sm">Be prepared. Increased likelihood of impacts from severe weather.</p>
+                                    </div>
+                                    <div class="bg-red-50 p-3 rounded border border-red-200">
+                                        <h6 class="font-semibold text-red-800">Red</h6>
+                                        <p class="text-sm">Take action. Dangerous weather expected; protect yourself and follow advice.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Effects of blizzards section -->
+                        <div id="tab2" class="tab-content hidden">
+                            <h3 class="text-xl font-semibold mb-4 text-red-800">Effects of Severe Winter Weather in the UK</h3>
+                            <p class="mb-4">While true blizzards are less common in the UK than in other parts of the world, severe winter weather can still have widespread impacts on communities, infrastructure, and daily life across Britain.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <div class="bg-red-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-red-800 mb-2">Health Impacts</h4>
+                                    <ul class="space-y-1">
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Hypothermia and frostbite in extreme conditions</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Increased risk of slips and falls on icy surfaces</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Heart attacks from overexertion (e.g., snow clearing)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Increased pressure on NHS and emergency services</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Excess winter deaths, particularly among the elderly</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bg-red-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-red-800 mb-2">Infrastructure</h4>
+                                    <ul class="space-y-1">
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Power outages affecting thousands of homes</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Water supply issues from frozen or burst pipes</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Telecommunications disruptions</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>School closures across affected regions</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Strain on local council resources for gritting and snow clearing</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bg-red-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-red-800 mb-2">Transportation</h4>
+                                    <ul class="space-y-1">
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Stranded motorists on motorways and rural roads</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Rail service cancellations and delays</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Airport closures and flight cancellations</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Public transport disruption in towns and cities</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Isolated rural communities cut off from services</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bg-red-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-red-800 mb-2">Economic</h4>
+                                    <ul class="space-y-1">
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Business closures and lost productivity</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Supply chain disruption affecting supermarkets</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Agricultural losses, particularly livestock in upland areas</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Increased energy demand and rising heating costs</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span>Significant costs to local authorities for winter maintenance</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold mb-3 text-red-800">Regional Impacts Across the UK</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                                        <h5 class="font-semibold text-red-800 mb-2">Scotland and Northern England</h5>
+                                        <p class="mb-2">Areas more accustomed to severe winter weather but still vulnerable:</p>
+                                        <ul class="space-y-1">
+                                            <li class="flex items-start">
+                                                <span class="text-red-600 mr-2">•</span>
+                                                <span>Frequent isolation of rural Highland communities</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <span class="text-red-600 mr-2">•</span>
+                                                <span>Major trunk roads like the M8, A9, and A1 often severely affected</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <span class="text-red-600 mr-2">•</span>
+                                                <span>Higher risk to livestock farming in upland areas</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                                        <h5 class="font-semibold text-red-800 mb-2">Southern England and Urban Areas</h5>
+                                        <p class="mb-2">Less frequent severe winter weather but often greater disruption when it occurs:</p>
+                                        <ul class="space-y-1">
+                                            <li class="flex items-start">
+                                                <span class="text-red-600 mr-2">•</span>
+                                                <span>Transport networks quickly overwhelmed by relatively small amounts of snow</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <span class="text-red-600 mr-2">•</span>
+                                                <span>Higher population density creating greater strain on services</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <span class="text-red-600 mr-2">•</span>
+                                                <span>Significant economic impact from business and commuter disruption</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-red-50 p-4 rounded-lg border border-red-200 mb-4">
+                                <h4 class="font-semibold text-red-800 mb-2">Long-Term Considerations</h4>
+                                <p class="mb-2">Severe winter weather in the UK raises several longer-term issues:</p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <span class="text-red-600 mr-2">•</span>
+                                        <span><strong>Winter resilience</strong> - Questions about UK infrastructure preparation for infrequent but severe events.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-600 mr-2">•</span>
+                                        <span><strong>Local authority funding</strong> - Budget constraints affecting winter maintenance capabilities.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-600 mr-2">•</span>
+                                        <span><strong>Fuel poverty</strong> - Highlighting issues of affordable heating during prolonged cold periods.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-600 mr-2">•</span>
+                                        <span><strong>Climate change adaptation</strong> - Preparing for potentially more extreme and unpredictable winter weather patterns.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+            
+                        <!-- Safety Tips section -->
+                        <div id="tab3" class="tab-content hidden">
+                            <h3 class="text-xl font-semibold mb-4 text-red-800">UK Winter Weather Safety Guide</h3>
+                            <p class="mb-4">Severe winter weather in the UK, while less frequent than in some countries, requires proper preparation and safety measures. This guide provides UK-specific advice for staying safe during snow, ice and blizzard conditions.</p>
+                            
+                            <h4 class="text-lg font-semibold mb-3 text-red-800">Before Severe Weather Arrives</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                                    <h5 class="font-semibold text-red-800 mb-2 border-b border-red-200 pb-1">Home Preparation</h5>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Insulate your home</strong> - Check loft insulation, draught-proof windows and doors, and lag exposed water pipes.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Stock essential supplies</strong> - Keep a few days' worth of food, water, and medications.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Check heating system</strong> - Service your boiler annually and know how to operate your heating controls efficiently.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Battery-powered radio</strong> - Essential for updates if power fails and mobile networks are disrupted.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                                    <h5 class="font-semibold text-red-800 mb-2 border-b border-red-200 pb-1">Vehicle Preparation</h5>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Winter check</strong> - Ensure antifreeze, battery, tyres, wipers and lights are ready for winter conditions.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Keep fuel tank topped up</strong> - Don't let it fall below half in winter to prevent condensation freezing in fuel lines.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Emergency kit</strong> - Include ice scraper, de-icer, torch, blankets, high-visibility vest, and shovel.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Check tyres</strong> - Ensure at least 3mm tread depth for winter driving (legal minimum is 1.6mm).</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <h4 class="text-lg font-semibold mb-3 text-red-800">During Severe Winter Weather</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                                    <h5 class="font-semibold text-red-800 mb-2 border-b border-red-200 pb-1">At Home</h5>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Heat your home efficiently</strong> - Keep main living room around 18-21°C and other rooms at least 16°C.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Check on vulnerable neighbours</strong> - Especially the elderly or those living alone.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>If pipes freeze</strong> - Turn off water at the stopcock and thaw pipes gradually with warm (not hot) water or towels.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Carbon monoxide awareness</strong> - Ensure proper ventilation with any fuel-burning heaters and have working CO detectors.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Monitor Met Office updates</strong> - Check for updated weather warnings and forecasts.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                                    <h5 class="font-semibold text-red-800 mb-2 border-b border-red-200 pb-1">When Travelling</h5>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Consider if journey is essential</strong> - Postpone travel if Met Office has issued warnings.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Plan your route</strong> - Stick to major roads more likely to be cleared and gritted.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>If stranded</strong> - Stay with your vehicle, call for help, run engine occasionally for heat (ensure exhaust is clear).</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Drive appropriately</strong> - Use higher gears, keep speeds down, leave 10 times normal stopping distance on snow/ice.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-red-600 mr-2">•</span>
+                                            <span><strong>Check public transport</strong> - Verify service status before travelling by rail or bus.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <h4 class="text-lg font-semibold mb-3 text-red-800">UK-Specific Emergency Information</h4>
+                            <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+                                <h5 class="font-semibold text-red-800 mb-2 border-b border-red-200 pb-1">Essential Contacts & Resources</h5>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-white p-3 rounded-lg border border-red-100">
+                                        <h6 class="font-semibold text-red-800 mb-1">Emergency Services</h6>
+                                        <ul class="space-y-1 text-sm">
+                                            <li>Emergency: <strong>999</strong> or <strong>112</strong></li>
+                                            <li>NHS Non-emergency: <strong>111</strong></li>
+                                            <li>Police Non-emergency: <strong>101</strong></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white p-3 rounded-lg border border-red-100">
+                                        <h6 class="font-semibold text-red-800 mb-1">Weather Information</h6>
+                                        <ul class="space-y-1 text-sm">
+                                            <li>Met Office Website</li>
+                                            <li>Met Office Weather App</li>
+                                            <li>Local BBC or ITV weather forecasts</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white p-3 rounded-lg border border-red-100">
+                                        <h6 class="font-semibold text-red-800 mb-1">Road Information</h6>
+                                        <ul class="space-y-1 text-sm">
+                                            <li>Traffic England</li>
+                                            <li>Traffic Scotland</li>
+                                            <li>Traffic Wales</li>
+                                            <li>Local Council Websites</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white p-3 rounded-lg border border-red-100">
+                                        <h6 class="font-semibold text-red-800 mb-1">Utilities</h6>
+                                        <ul class="space-y-1 text-sm">
+                                            <li>Power Cuts: <strong>105</strong></li>
+                                            <li>Gas Emergency: <strong>0800 111 999</strong></li>
+                                            <li>Water: Contact local water company</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+                                <h5 class="font-semibold text-red-800 mb-2 border-b border-red-200 pb-1">Winter Emergency Kit</h5>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                    <div class="text-center p-2">
+                                        <svg class="w-6 h-6 mx-auto text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Torch & Batteries</span>
+                                    </div>
+                                    <div class="text-center p-2">
+                                        <svg class="w-6 h-6 mx-auto text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Portable Phone Charger</span>
+                                    </div>
+                                    <div class="text-center p-2">
+                                        <svg class="w-6 h-6 mx-auto text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Food & Water</span>
+                                    </div>
+                                    <div class="text-center p-2">
+                                        <svg class="w-6 h-6 mx-auto text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Blankets</span>
+                                    </div>
+                                    <div class="text-center p-2">
+                                        <svg class="w-6 h-6 mx-auto text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">First Aid Kit</span>
+                                    </div>
+                                    <div class="text-center p-2">
+                                        <svg class="w-6 h-6 mx-auto text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Battery Radio</span>
+                                    </div>
+                                    <div class="text-center p-2">
+                                        <svg class="w-6 h-6 mx-auto text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Medications</span>
+                                    </div>
+                                    <div class="text-center p-2">
+                                        <svg class="w-6 h-6 mx-auto text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Snow Shovel</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                                <h4 class="font-semibold text-red-800 mb-2 border-b border-red-200 pb-1">After Severe Weather</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <span class="text-red-600 mr-2">•</span>
+                                        <span><strong>Clear snow safely</strong> - Push rather than lift, take regular breaks, wear appropriate footwear.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-600 mr-2">•</span>
+                                        <span><strong>Check your property</strong> - Look for damage to roof, potential water ingress from melting snow.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-600 mr-2">•</span>
+                                        <span><strong>Clear paths and pavements</strong> - Clear snow, apply grit/salt (not hot water, which can refreeze).</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-600 mr-2">•</span>
+                                        <span><strong>Watch for signs of hypothermia</strong> - Confusion, slurred speech, drowsiness require immediate medical attention.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-600 mr-2">•</span>
+                                        <span><strong>Prepare for potential flooding</strong> - As temperatures rise, rapid snowmelt can cause flooding issues.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gradient-to-r from-red-800 to-red-600 text-white shadow-lg mt-8">
+        <div class="flex overflow-hidden h-2">
+            <div class="w-1/6 bg-red-400"></div>
+            <div class="w-1/6 bg-red-500"></div>
+            <div class="w-1/6 bg-red-600"></div>
+            <div class="w-1/6 bg-red-700"></div>
+            <div class="w-1/6 bg-red-800"></div>
+            <div class="w-1/6 bg-red-900"></div>
+        </div>
+
+        <div class="container mx-auto py-6 px-4">
+            <div class="flex flex-col items-center">
+                <p class="text-lg font-semibold">
+                    © 2025 Blizzard Alert Inc. All rights reserved.
+                </p>
+
+                <p class="mt-3 mb-4 text-sm opacity-90">
+                    Follow us on social media for real-time updates:
+                </p>
+
+                <div class="flex space-x-6 mt-2">
+                    <a href="https://facebook.com" target="_blank"
+                        class="flex items-center transition duration-300 hover:text-red-200">
+                        <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z">
+                            </path>
+                        </svg>
+                        Facebook
+                    </a>
+
+                    <a href="https://twitter.com" target="_blank"
+                        class="flex items-center transition duration-300 hover:text-red-200">
+                        <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                            </path>
+                        </svg>
+                        Twitter
+                    </a>
+
+                    <a href="https://instagram.com" target="_blank"
+                        class="flex items-center transition duration-300 hover:text-red-200">
+                        <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        Instagram
+                    </a>
+                </div>
+
+                <p class="mt-6 text-xs opacity-80">
+                    For emergency blizzard information, always consult your local weather service
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
