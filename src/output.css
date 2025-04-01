@@ -15,11 +15,16 @@
     --color-red-700: oklch(0.505 0.213 27.518);
     --color-red-800: oklch(0.444 0.177 26.899);
     --color-red-900: oklch(0.396 0.141 25.723);
+    --color-orange-50: oklch(0.98 0.016 73.684);
+    --color-orange-400: oklch(0.75 0.183 55.934);
+    --color-orange-600: oklch(0.646 0.222 41.116);
     --color-amber-50: oklch(0.987 0.022 95.277);
     --color-amber-200: oklch(0.924 0.12 95.746);
+    --color-amber-600: oklch(0.666 0.179 58.318);
     --color-amber-800: oklch(0.473 0.137 46.201);
     --color-yellow-50: oklch(0.987 0.026 102.212);
     --color-yellow-200: oklch(0.945 0.129 101.54);
+    --color-yellow-400: oklch(0.852 0.199 91.936);
     --color-yellow-800: oklch(0.476 0.114 61.907);
     --color-gray-50: oklch(0.985 0.002 247.839);
     --color-gray-800: oklch(0.278 0.033 256.848);
@@ -551,6 +556,9 @@
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -1268,8 +1276,20 @@
   .bg-amber-50 {
     background-color: var(--color-amber-50);
   }
+  .bg-amber-600 {
+    background-color: var(--color-amber-600);
+  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
+  }
+  .bg-orange-50 {
+    background-color: var(--color-orange-50);
+  }
+  .bg-orange-400 {
+    background-color: var(--color-orange-400);
+  }
+  .bg-orange-600 {
+    background-color: var(--color-orange-600);
   }
   .bg-red-50 {
     background-color: var(--color-red-50);
@@ -1306,6 +1326,9 @@
   }
   .bg-yellow-50 {
     background-color: var(--color-yellow-50);
+  }
+  .bg-yellow-400 {
+    background-color: var(--color-yellow-400);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab;
